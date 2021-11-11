@@ -1,0 +1,136 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+models:
+  tsconfig:
+    type: data
+    label: Tsconfig
+    file: scully/tsconfig.json
+    fields:
+      - type: boolean
+        name: compileOnSave
+        label: Compile On Save
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: boolean
+            name: esModuleInterop
+            label: Es Module Interop
+          - type: boolean
+            name: importHelpers
+            label: Import Helpers
+          - type: list
+            name: lib
+            label: Lib
+            items:
+              type: string
+          - type: string
+            name: module
+            label: Module
+          - type: string
+            name: moduleResolution
+            label: Module Resolution
+          - type: boolean
+            name: sourceMap
+            label: Source Map
+          - type: string
+            name: target
+            label: Target
+          - type: list
+            name: types
+            label: Types
+            items:
+              type: string
+          - type: boolean
+            name: skipLibCheck
+            label: Skip Lib Check
+          - type: boolean
+            name: skipDefaultLibCheck
+            label: Skip Default Lib Check
+          - type: list
+            name: typeRoots
+            label: Type Roots
+            items:
+              type: string
+          - type: boolean
+            name: allowSyntheticDefaultImports
+            label: Allow Synthetic Default Imports
+      - type: list
+        name: exclude
+        label: Exclude
+        items:
+          type: string
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: css_prefix_text
+        label: Css Prefix Text
+      - type: boolean
+        name: css_use_suffix
+        label: Css Use Suffix
+      - type: boolean
+        name: hinting
+        label: Hinting
+      - type: number
+        name: units_per_em
+        label: Units Per Em
+        subtype: int
+      - type: number
+        name: ascent
+        label: Ascent
+        subtype: int
+      - type: list
+        name: glyphs
+        label: Glyphs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: uid
+              label: Uid
+            - type: string
+              name: css
+              label: Css
+            - type: number
+              name: code
+              label: Code
+              subtype: int
+            - type: string
+              name: src
+              label: Src
+            - type: boolean
+              name: selected
+              label: Selected
+            - type: object
+              name: svg
+              label: Svg
+              fields:
+                - type: string
+                  name: path
+                  label: Path
+                - type: number
+                  name: width
+                  label: Width
+                  subtype: float
+            - type: list
+              name: search
+              label: Search
+              items:
+                type: string
+  scully_routes:
+    type: data
+    label: Scully Routes
+    file: src/assets/scully-routes.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: route
+          label: Route
